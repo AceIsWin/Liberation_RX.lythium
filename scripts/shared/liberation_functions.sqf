@@ -111,3 +111,11 @@ is_recyclable = compileFinal preprocessFileLineNumbers "scripts\shared\functions
 lrx_getParamData = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_getParamData.sqf";
 lrx_getParamValue = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_getParamValue.sqf";
 reammo_ai = compileFinal preprocessFileLineNumbers "scripts\shared\functions\F_reammo_ai.sqf";
+
+F_hunt = compileFinal preprocessFileLineNumbers "scripts\shared\functions\lambs\fn_hunt.sqf";
+F_rush = compileFinal preprocessFileLineNumbers "scripts\shared\functions\lambs\fn_rush.sqf";
+F_findClosestTarget = compileFinal preprocessFileLineNumbers "scripts\shared\functions\lambs\fn_findClosestTarget.sqf";
+F_findBuildings = compileFinal preprocessFileLineNumbers "scripts\shared\functions\lambs\fn_findBuildings.sqf";
+F_doUgl = compileFinal preprocessFileLineNumbers "scripts\shared\functions\lambs\fn_doUgl.sqf";
+F_creep = compileFinal preprocessFileLineNumbers "scripts\shared\functions\lambs\fn_creep.sqf";
+F_garrison = compileFinal preprocessFileLineNumbers "scripts\shared\functions\lambs\fn_garrison.sqf";
