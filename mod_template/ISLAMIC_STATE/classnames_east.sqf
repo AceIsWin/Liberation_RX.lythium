@@ -5,28 +5,28 @@ GRLIB_east_modder = "AceIsWin";
 // All class MUST be defined !
 
 opfor_crew = "UK3CB_MEE_O_CREW";
-opfor_sentry = "UK3CB_MEE_O_RIF_3";
+opfor_sentry = "UK3CB_MEE_O_TL";
 opfor_rifleman = "UK3CB_MEE_O_RIF_1";
 opfor_grenadier = "UK3CB_MEE_O_GL";
 opfor_squad_leader = "UK3CB_MEE_O_SL";
 opfor_team_leader = "UK3CB_MEE_O_TL";
 opfor_marksman = "UK3CB_MEE_O_MK";
-opfor_machinegunner = "LOP_ISTS_OPF_Infantry_AR_2";
-opfor_heavygunner = "LOP_ISTS_OPF_Infantry_AR";
-opfor_medic = "LOP_ISTS_OPF_Infantry_Corpsman";
-opfor_rpg = "LOP_ISTS_OPF_Infantry_Rifleman_3";
-opfor_at = "LOP_ISTS_OPF_Infantry_AT";
-opfor_aa = "LOP_ISTS_OPF_Infantry_AT";
+opfor_machinegunner = "UK3CB_MEE_O_AR";
+opfor_heavygunner = "UK3CB_MEE_O_MG";
+opfor_medic = "UK3CB_MEE_O_MD";
+opfor_rpg = "UK3CB_MEE_O_LAT";
+opfor_at = "UK3CB_MEE_O_AT";
+opfor_aa = "UK3CB_MEE_O_AA";
 opfor_officer = "UK3CB_MEE_O_COM";
-opfor_sharpshooter = "LOP_ISTS_OPF_Infantry_Marksman";
-opfor_sniper = "LOP_ISTS_OPF_Infantry_Marksman";
-opfor_spotter = "LOP_ISTS_OPF_Infantry_Rifleman_7";
-opfor_engineer = "LOP_ISTS_OPF_Infantry_Engineer";
-opfor_paratrooper = "LOP_ISTS_OPF_Infantry_Rifleman_8";
+opfor_sharpshooter = "UK3CB_MEE_O_MK";
+opfor_sniper = "UK3CB_MEE_O_SNI";
+opfor_spotter = "UK3CB_MEE_O_SPOT";
+opfor_engineer = "UK3CB_MEE_O_ENG";
+opfor_paratrooper = "UK3CB_MEE_O_RIF_1";
 opfor_mrap_hmg = "UK3CB_MEE_O_LR_M2";
 opfor_mrap_gmg = "UK3CB_MEE_O_LR_AGS30";
-//opfor_transport_helo = "LOP_TKA_Mi8MT_Cargo";
-opfor_transport_truck = "UK3CB_MEE_O_V3S_Closed";
+opfor_transport_helo = "";
+opfor_transport_truck = "UK3CB_MEE_O_V3S_Open";
 opfor_fuel_truck = "UK3CB_MEE_O_V3S_Refuel";
 opfor_ammo_truck = "UK3CB_MEE_O_V3S_Reammo";
 opfor_fuel_container = "Land_Pod_Heli_Transport_04_fuel_F";
@@ -36,53 +36,88 @@ opfor_house = "Land_Cargo_House_V3_F";
 opfor_patrol = "Land_Cargo_Patrol_V3_F";
 opfor_hq = "Land_Cargo_HQ_V3_F";
 
+// To force add uniform
+opfor_uniforms = [
+	"UK3CB_MEE_O_U_01",
+	"UK3CB_MEE_O_U_04_D"
+];
+// Kit to put in uniform if replacing due to invalid ID
+opfor_uniform_kit = [
+	["ACE_packingBandage",10],
+	["ACE_tourniquet",4],
+	["ACE_morphine",1]
+];
+// Force add a backpack
+opfor_backpacks = [
+	"UK3CB_ION_B_B_RadioBag_BLK"
+];
+// Force add a vest
+opfor_vests = [
+	"rhs_belt_AK4",
+	"UK3CB_V_Pouch"
+];
+
 militia_squad = [
-    "LOP_ISTS_OPF_Infantry_SL",         // Squad Leader
-    "LOP_ISTS_OPF_Infantry_AR_Asst",    // Assistant Automatic Rifleman
-    "LOP_ISTS_OPF_Infantry_AR",         // Automatic Rifleman
-    "LOP_ISTS_OPF_Infantry_AR_2",       // Automatic Rifleman (Variant)
-    "LOP_ISTS_OPF_Infantry_Corpsman",   // Medic
-    "LOP_ISTS_OPF_Infantry_Engineer",   // Engineer
-    "LOP_ISTS_OPF_Infantry_GL",         // Grenadier
-    "LOP_ISTS_OPF_Infantry_Marksman",   // Marksman
-    "LOP_ISTS_OPF_Infantry_Rifleman_5", // Rifleman
-    "LOP_ISTS_OPF_Infantry_AT",         // Light AT
-    "LOP_ISTS_OPF_Infantry_Rifleman_8", // Rifleman ( Variant)
-    "LOP_ISTS_OPF_Infantry_Rifleman_9", // Sharpshooter (Alternative)
-    "LOP_ISTS_OPF_Infantry_TL",         // Team Leader
-    "LOP_ISTS_OPF_Infantry_Rifleman_7", // Additional Rifleman
-    "LOP_ISTS_OPF_Infantry_Rifleman_3"  // Additional Rifleman (Alternate)
+	"UK3CB_MEE_O_SL",												// Sergeant 
+	"UK3CB_MEE_O_TL",										// Junior Sergeant 
+	"UK3CB_MEE_O_TL",												// Efreitor 
+	"UK3CB_MEE_O_RIF_1",												// Rifleman 
+	"UK3CB_MEE_O_RIF_1",												// Rifleman 
+	"UK3CB_MEE_O_RIF_1",												// Rifleman 
+	"UK3CB_MEE_O_RIF_1",												// Rifleman 
+	"UK3CB_MEE_O_RIF_1",												// Rifleman 
+	"UK3CB_MEE_O_LAT",													// Rifleman w/ RPG-26 
+	"UK3CB_MEE_O_LAT",													// Rifleman w/ RPG-26 
+	"UK3CB_MEE_O_AT",												// Rifleman w/ RShG2 
+	"UK3CB_MEE_O_GL",											// Grenadier w/ GP-25 
+	"UK3CB_MEE_O_GL",											// Grenadier w/ GP-25 
+	"UK3CB_MEE_O_GL",											// Grenadier w/ GP-25 
+	"UK3CB_MEE_O_AR",											// Autorifleman (PKP) 
+	"UK3CB_MEE_O_MG",										// Machinegunner 
+	"UK3CB_MEE_O_MK",												// Marksman 
+	"UK3CB_MEE_O_SPOT",											// Sharpshooter 
+	"UK3CB_MEE_O_SNI",												// Sniper 
+	"UK3CB_MEE_O_MD",												// Medic 
+	"UK3CB_MEE_O_MD",												// Medic 
+	"UK3CB_MEE_O_ENG",												// Engineer 
+	"UK3CB_MEE_O_ENG",												// Engineer 
+	"UK3CB_MEE_O_AT",										// Grenadier w/ RPG-7V2 
+	"UK3CB_MEE_O_AT",										// Grenadier w/ RPG-7V2 
+	"UK3CB_MEE_O_AT",													// AT Specialist 
+	"UK3CB_MEE_O_AA" 													// AA Specialist 
 ];
 
 militia_loadout_overide = [
-    "LOP_ISTS_OPF_Infantry_AT"
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.
 militia_vehicles = [
-    // **Most Common (HMG Technicals)**
-    "LOP_ISTS_OPF_Nissan_PKM",
-    "LOP_ISTS_OPF_Nissan_PKM",
-    "LOP_ISTS_OPF_Nissan_PKM",
-    "LOP_ISTS_OPF_Offroad_M2",
-    "LOP_ISTS_OPF_Offroad_M2",
-    "LOP_ISTS_OPF_Landrover_M2",
-    "LOP_ISTS_OPF_Landrover_M2",
-    "UK3CB_ADM_O_LR_M2",
-    "UK3CB_ADM_O_LR_M2",
+    //  Common gun trucks (More likely to spawn)
+    "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm",
+    "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2",
+    "UK3CB_MEE_O_Hilux_Dshkm", "UK3CB_MEE_O_Hilux_Dshkm", "UK3CB_MEE_O_Hilux_Dshkm",
 
-    // **Moderately Common (Explosives & AT)**
-    "LOP_ISTS_OPF_Offroad_AT",
-    "LOP_ISTS_OPF_Landrover_SPG9",
-    "UK3CB_ADM_O_Hilux_GMG",
-    "UK3CB_ADM_O_LR_AGS30",
+    //  AT & Indirect Fire (Moderate spawn rate)
+    "UK3CB_MEE_O_Hilux_Spg9", "UK3CB_MEE_O_Hilux_Spg9",
+    "UK3CB_MEE_O_Hilux_Metis", "UK3CB_MEE_O_Hilux_Metis",
+    "UK3CB_MEE_O_Hilux_Rocket",
+    "UK3CB_MEE_O_Hilux_Mortar",
 
-    // **Rare (Improvised & Unique)**
-    "UK3CB_ADM_O_RIF_1",
-    "UK3CB_ADM_O_RIF_1"
+    //  Heavy variants (Less common but still present)
+    "UK3CB_MEE_O_Hilux_GMG", "UK3CB_MEE_O_Hilux_GMG",
+    "UK3CB_MEE_O_Hilux_BMP",
+    "UK3CB_MEE_O_Hilux_BTR",
+
+    //  AA (Kept rare to prevent overpowered air denial)
+    "UK3CB_MEE_O_Hilux_Zu23_Front",
+    "UK3CB_MEE_O_Hilux_Vulcan_Front",
+    "UK3CB_MEE_O_Hilux_Igla_Chair",
+
+    //  Land Rovers & Datsuns (Light utility gun trucks)
+    "UK3CB_MEE_O_LR_M2", "UK3CB_MEE_O_LR_M2",
+    "UK3CB_MEE_O_LR_SPG9",
+    "UK3CB_MEE_O_Datsun_Pkm", "UK3CB_MEE_O_Datsun_Pkm"
 ];
-
-
 
 opfor_boats = [
 	"O_Boat_Armed_01_hmg_F"
@@ -90,284 +125,160 @@ opfor_boats = [
 
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 opfor_vehicles = [
-    // **Most Common (APCs & Light Armor)**
-    "LOP_ISTS_OPF_BTR60",
-    "LOP_ISTS_OPF_BTR60",
-    "UK3CB_MEE_O_BTR40_MG",
-    "UK3CB_MEE_O_BTR40_MG",
-    "LOP_ISTS_OPF_BMP1",
-    "LOP_ISTS_OPF_BMP1",
-    "LOP_ISTS_OPF_BMP2",
-    "UK3CB_MEE_O_BMP1",
+    //  Common Light Vehicles (High Spawn Rate)
+    "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm",
+    "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2",
+    "UK3CB_MEE_O_Hilux_Dshkm", "UK3CB_MEE_O_Hilux_Dshkm", "UK3CB_MEE_O_Hilux_Dshkm",
+    "UK3CB_MEE_O_LR_M2", "UK3CB_MEE_O_LR_M2",
+    "UK3CB_MEE_O_Datsun_Pkm", "UK3CB_MEE_O_Datsun_Pkm",
 
-    // **Moderately Common (Tanks)**
-    "LOP_ISTS_OPF_T55",
-    "UK3CB_MEE_O_T55",
-    "LOP_ISTS_OPF_T72BA",
+    //  AT Vehicles & Medium Firepower (Moderate Spawn Rate)
+    "UK3CB_MEE_O_Hilux_Spg9", "UK3CB_MEE_O_Hilux_Spg9",
+    "UK3CB_MEE_O_LR_SPG9",
+    "UK3CB_MEE_O_Hilux_Metis", "UK3CB_MEE_O_Hilux_Metis",
+    "UK3CB_MEE_O_BRDM2",
+    "UK3CB_MEE_O_BRDM2_ATGM",
+    "UK3CB_MEE_O_M113tank_M2_90",
+    "UK3CB_MEE_O_M113tank_MK19_90",
+    "UK3CB_MEE_O_MTLB_BMP",
 
-    // **Rare (AA & Support Vehicles)**
-    "LOP_ISTS_OPF_ZSU234",
-    "UK3CB_MEE_O_MTLB_ZU23",
-    "UK3CB_MEE_O_V3S_Zu23"
+    //  Medium Armor & Infantry Support
+    "UK3CB_MEE_O_BTR40_MG",
+    "UK3CB_MEE_O_Hilux_BTR",
+    "UK3CB_MEE_O_Hilux_BMP",
+
+    //  Heavy Vehicles & Rare Assets (Low Spawn Rate)
+    "UK3CB_MEE_O_T55", "UK3CB_MEE_O_T55",   // Keep T-55 rare but available
+    "UK3CB_MEE_O_BRDM2_HQ",
+
+    //  Anti-Air (Limited to Avoid Overwhelming Air Assets)
+    "UK3CB_MEE_O_Hilux_Zu23",
+    "UK3CB_MEE_O_Hilux_Zu23_Front",
+    "UK3CB_MEE_O_Hilux_Vulcan_Front",
+    "UK3CB_MEE_O_Hilux_Igla_Chair",
+    "UK3CB_MEE_O_V3S_Zu23", // Truck-mounted ZU-23 for mobile AA
+
+    //  Indirect Fire Support (Very Rare)
+    "UK3CB_MEE_O_Hilux_Mortar",
+    "UK3CB_MEE_O_Hilux_Rocket",
+    "UK3CB_MEE_O_Hilux_Rocket_Arty",
+
+    //  Special Purpose Vehicles (Occasionally Spawn)
+    "UK3CB_MEE_O_LR_AGS30"
 ];
+
 
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 opfor_vehicles_low_intensity = [
-    // **Most Common (Light Vehicles & Technicals)**
-    "LOP_ISTS_OPF_Landrover_M2",
-    "LOP_ISTS_OPF_Landrover_M2",
-    "LOP_ISTS_OPF_Nissan_PKM",
-    "LOP_ISTS_OPF_Nissan_PKM",
-    "LOP_ISTS_OPF_Nissan_PKM",
-    "LOP_ISTS_OPF_Nissan_PKM",
-    "LOP_ISTS_OPF_Offroad_AT",
-    "LOP_ISTS_OPF_Offroad_AT",
+    //  Common Light Vehicles (Frequent Spawns)
+    "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm",
+    "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2",
+    "UK3CB_MEE_O_Hilux_Dshkm", "UK3CB_MEE_O_Hilux_Dshkm",
+    "UK3CB_MEE_O_LR_M2", "UK3CB_MEE_O_LR_M2",
+    "UK3CB_MEE_O_Datsun_Pkm", "UK3CB_MEE_O_Datsun_Pkm",
 
-    // **Moderately Common (APCs & Infantry Support)**
-    "LOP_ISTS_OPF_BMP1",
-    "LOP_ISTS_OPF_BMP1",
-    "LOP_ISTS_OPF_BMP2",
-    "LOP_ISTS_OPF_BTR60",
-    "LOP_ISTS_OPF_BTR60",
-    "UK3CB_MEE_O_BTR40",
-    "UK3CB_MEE_O_BTR40_MG",
+    //  Limited AT Support (Rare)
+    "UK3CB_MEE_O_Hilux_Spg9",
+    "UK3CB_MEE_O_LR_SPG9",
 
-    // **Rare (Light Armor & Weak Support Vehicles)**
-    "UK3CB_MEE_O_MTLB_PKT",
-    "UK3CB_MEE_O_MTLB_PKT"
+    //  Rare Medium Armor & Support Vehicles
+    "UK3CB_MEE_O_BRDM2",   // Early-game scout vehicle
+    "UK3CB_MEE_O_BTR40_MG", // Light APC
+    "UK3CB_MEE_O_BRDM2_HQ", // Command variant, low threat
+
+    //  Minimal AA Presence (Rare)
+    "UK3CB_MEE_O_Hilux_Igla_Chair", // Weak early-game AA
+    "UK3CB_MEE_O_Hilux_Zu23_Front", // One weak ZU-23 option
+
+    //  Minimal Indirect Fire Support (Very Rare)
+    "UK3CB_MEE_O_Hilux_Mortar"
 ];
+
 
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at high enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles = [
-    // **Most Common (Light & Fast Units)**
-    "LOP_ISTS_OPF_M1025_W_M2",      // HMMWV with M2 (Fast Response Unit)
-    "LOP_ISTS_OPF_M1025_W_M2",      // HMMWV with M2 (Fast Response Unit)
-    "LOP_ISTS_OPF_M1025_W_M2",      // HMMWV with M2 (Fast Response Unit)
-    "LOP_ISTS_OPF_M1025_W_Mk19",    // HMMWV with Mk19 GMG (Fire Support)
-    "LOP_ISTS_OPF_M1025_W_Mk19",    // HMMWV with Mk19 GMG (Fire Support)
+    //  Common Light Vehicles (Fast Response)
+    "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm",
+    "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2",
+    "UK3CB_MEE_O_Hilux_Dshkm", "UK3CB_MEE_O_Hilux_Dshkm",
+    "UK3CB_MEE_O_LR_M2",
+    "UK3CB_MEE_O_BRDM2", // Recon support
+    
+    //  Infantry Fighting Vehicles (Support Firepower)
+    "UK3CB_MEE_O_BTR40_MG", "UK3CB_MEE_O_BTR40_MG",
+    "UK3CB_MEE_O_BTR60", // Heavier transport, moderate spawn chance
+    "UK3CB_MEE_O_BMP1",  // Mechanized infantry support
+    "UK3CB_MEE_O_M113tank_M2_90", // Mechanized infantry support
+    "UK3CB_MEE_O_MTLB_BMP", // Heavier support IFV
 
-    // **Moderately Common (APCs & IFVs)**
-    "LOP_ISTS_OPF_BTR60",           // BTR-60PB (Light Wheeled APC)
-    "LOP_ISTS_OPF_BTR60",           // BTR-60PB (Light Wheeled APC)
-    "LOP_ISTS_OPF_BMP1",            // BMP-1 (Basic Assault APC)
-    "LOP_ISTS_OPF_BMP2",            // BMP-2 (Better Firepower APC)
-    "UK3CB_MEE_O_BMP1",             // BMP-1 (Alternative Variant)
+    //  Anti-Tank & Heavy Fire Support (Rare)
+    "UK3CB_MEE_O_BRDM2_ATGM", // ATGM carrier, rare but deadly
+    "UK3CB_MEE_O_Hilux_Metis", // Mobile ATGM, can take out armor
+    "UK3CB_MEE_O_Hilux_Spg9", // Light vehicle-mounted AT
+    "UK3CB_MEE_O_Hilux_Rocket_Arty", // Indirect support (very rare)
 
-    // **Less Common (Tanks)**
-    "UK3CB_MEE_O_T55",              // T-55 (Older MBT)
-    "LOP_ISTS_OPF_T55",             // T-55 (Older MBT)
-    "LOP_ISTS_OPF_T72BA",           // T-72BA (Main Insurgent MBT)
-    "LOP_ISTS_OPF_T72BA",           // T-72BA (Main Insurgent MBT)
+    //  Heavy Armor (Very Rare)
+    "UK3CB_MEE_O_T55", "UK3CB_MEE_O_T55", // Main battle tanks, very rare
 
-    // **Rare (AA & Artillery)**
-    "LOP_ISTS_OPF_ZSU234",          // ZSU-23-4 Shilka (Anti-Air Defense)
-    "UK3CB_MEE_O_MTLB_ZU23",        // MT-LB with ZU-23 AA Gun
-    "UK3CB_MEE_O_BM21",             // BM-21 Grad (Rocket Artillery)
+    //  Anti-Air (Low Frequency to Prevent Air Denial)
+    "UK3CB_MEE_O_Hilux_Zu23_Front", // Light AA technical
+    "UK3CB_MEE_O_V3S_Zu23", // Mobile ZU-23 support
+    "UK3CB_MEE_O_Hilux_Igla_Chair" // Basic MANPAD support
 
-    // **Very Rare (Air Support)**
-    "UK3CB_MEE_O_Mi_8AMT",          // Mi-8 (Transport & Light Air Support)
-    "UK3CB_MEE_O_Mi_24P",           // Mi-24P Hind (Heavy Attack Helicopter)
-    "UK3CB_MEE_O_UH1H_M240"         // UH-1H Huey with M240 (Light Gunship)
 ];
-
-
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles_low_intensity = [
-    // **Most Common (Light Vehicles & Infantry Support)**
-    "LOP_ISTS_OPF_M1025_W_M2",      // HMMWV with M2 (Light Scout/Support)
-    "LOP_ISTS_OPF_M1025_W_M2",
-    "LOP_ISTS_OPF_M1025_W_M2",
-    "LOP_ISTS_OPF_M1025_W_Mk19",    // HMMWV with Mk19 (Grenade Launcher Variant)
-    "LOP_ISTS_OPF_M1025_W_Mk19",
-    "UK3CB_MEE_O_BTR40_MG",         // Lightly Armored BTR-40 with MG
-    "UK3CB_MEE_O_BTR40_MG",
-    "UK3CB_MEE_O_MTLB_PKT",         // MT-LB with PKT MG (Basic Armor)
-    "UK3CB_MEE_O_MTLB_PKT",
+    // 🔹 Common Light Vehicles (Most Frequent)
+    "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm",
+    "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2",
+    "UK3CB_MEE_O_Hilux_Dshkm", "UK3CB_MEE_O_Hilux_Dshkm",
+    "UK3CB_MEE_O_LR_M2",
+    "UK3CB_MEE_O_Datsun_Pkm",
+    "UK3CB_MEE_O_BRDM2", // Light recon vehicle
 
-    // **Moderately Common (APCs & Light Armor)**
-    "LOP_ISTS_OPF_BTR60",           // Light Wheeled APC (Infantry Support)
-    "LOP_ISTS_OPF_BTR60",
-    "LOP_ISTS_OPF_BMP1",            // BMP-1 (Basic Assault APC)
-    "UK3CB_MEE_O_BMP1",             // Alternative BMP-1 (Variety)
-    "LOP_ISTS_OPF_BMP1",
+    // 🔹 Limited Infantry Support Vehicles (Rare)
+    "UK3CB_MEE_O_BTR40_MG", // Light APC with MG
+    "UK3CB_MEE_O_M113tank_M2_90", // Mechanized infantry support, low threat
 
-    // **Rare (Tanks & Air Support)**
-    "LOP_ISTS_OPF_T55",             // T-55 (Old MBT, lower threat)
-    "UK3CB_MEE_O_T55",              // Another T-55 variant
-    "UK3CB_MEE_O_UH1H_M240",        // UH-1H (Light Transport/Gunship)
-    "UK3CB_MEE_O_Mi_8AMT"           // Mi-8 (Limited Air Reinforcement)
+    // 🔹 Anti-Tank Support (Very Rare)
+    "UK3CB_MEE_O_Hilux_Spg9", // Only one light AT gun truck
+    "UK3CB_MEE_O_Hilux_Metis", // Limited ATGM capability
+
+    // 🔹 Minimal Anti-Air (Extremely Rare)
+    "UK3CB_MEE_O_Hilux_Igla_Chair" // One weak MANPADS option
 ];
+
 
 
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.
 If something in this array can't hold all 8 soldiers then buggy behaviours may occur.    */
 opfor_troup_transports_truck = [
-	opfor_transport_truck,
-    "UK3CB_MEE_O_Ural",           // Ural Covered (Troop Transport)
-    "UK3CB_MEE_O_Ural_open",      // Ural Open (Troop Transport)
-    "UK3CB_MEE_O_V3S_Transport",  // V3S Covered (Troop Transport)
-    "UK3CB_MEE_O_V3S_Open",       // V3S Open (Troop Transport)
-    "UK3CB_MEE_O_Kamaz_covered",  // Kamaz Covered (Troop Transport)
-    "UK3CB_MEE_O_Kamaz_open",     // Kamaz Open (Troop Transport)
-    "LOP_ISTS_OPF_Kamaz_Covered", // ISIS Kamaz Covered (Troop Transport)
-    "LOP_ISTS_OPF_Kamaz_Open"     // ISIS Kamaz Open (Troop Transport)
+	opfor_transport_truck
 ];
 
 opfor_troup_transports_heli = [
-	opfor_transport_helo,
-	"UK3CB_MEE_O_UH1H_M240",      // UH-1H Huey with M240 (Light Transport & Fire Support)
-    "UK3CB_MEE_O_UH1H_unarmed",   // UH-1H Huey (Pure Transport)
-    "UK3CB_MEE_O_Mi_8AMT",        // Mi-8 (Heavy Transport)
-    "UK3CB_MEE_O_Mi_8MTV",        // Mi-8MTV (Upgraded Variant)
-    "UK3CB_MEE_O_Mi_8MT",         // Mi-8MT (Standard Military Transport)
-    "UK3CB_MEE_O_Mi_17",          // Mi-17 (Troop Transport)
-    "UK3CB_MEE_O_Mi_24P"          // Mi-24P Hind (Dual Role: Troop Transport & CAS)
+	opfor_transport_helo
 ];
 
 // Enemy air vehicles that will spawn in flight
 opfor_air = [
-    // **Most Common (Light Helicopters & Transports)**
-    "UK3CB_MEE_O_UH1H_M240",      // UH-1H Huey with M240 (Light Gunship)
-    "UK3CB_MEE_O_UH1H_M240",      
-    "UK3CB_MEE_O_UH1H_M240",      
-    "UK3CB_MEE_O_Mi_8AMTSh",      // Mi-8AMTSh (Transport & Gunship)
-    "UK3CB_MEE_O_Mi_8AMTSh",
-    "UK3CB_MEE_O_Mi_8AMTSh",
-
-    // **Moderately Common (Gunships)**
-    "UK3CB_MEE_O_Mi_24P",         // Mi-24P Hind (Heavy Gunship & Transport)
-    "UK3CB_MEE_O_Mi_24P",
-    "UK3CB_MEE_O_Mi_24V",         // Mi-24V Hind (CAS Gunship)
-    "UK3CB_MEE_O_Mi_24V",
-
-    // **Rare (Fixed-Wing Aircraft)**
-    "UK3CB_MEE_O_L39_CAS",        // L-39 Albatros (Trainer & Light Attack Aircraft)
-    "UK3CB_MEE_O_L39_CAS",
-    "UK3CB_MEE_O_Su25SM",         // Su-25 Frogfoot (Close Air Support Jet)
-    
-    // **Very Rare (Improvised & Special Ops)**
-    "UK3CB_MEE_O_AN2"             // An-2 (Light Transport, Paratrooper Deployment)
 ];
 
 
 
 opfor_statics = [
-    // **Most Common (HMGs & Light Suppression)**
-    "LOP_ISTS_OPF_Static_DSHKM",
-    "LOP_ISTS_OPF_Static_DSHKM",
-    "UK3CB_MEE_O_DSHKM",
-    "UK3CB_MEE_O_DSHKM",
-    "UK3CB_MEE_O_DSHkM_Mini_TriPod",
-    "UK3CB_MEE_O_DSHkM_Mini_TriPod",
-    "LOP_ISTS_OPF_Kord",
-    "LOP_ISTS_OPF_Kord_High",
-    "UK3CB_MEE_O_KORD",
+    "UK3CB_MEE_O_2b14_82mm",
     "UK3CB_MEE_O_KORD_high",
-    "LOP_ISTS_OPF_Static_M2",
-    "LOP_ISTS_OPF_Static_M2_MiniTripod",
-    "LOP_ISTS_OPF_NSV_TriPod",
-    "UK3CB_MEE_O_NSV",
     "UK3CB_MEE_O_PKM_High",
-    "UK3CB_MEE_O_PKM_Low",
-    "UK3CB_MEE_O_PKM_nest_des",
-    "UK3CB_MEE_O_PKM_nest",
-
-    // **Moderately Common (AT & Grenade Launchers)**
-    "LOP_ISTS_OPF_Static_AT4",
-    "LOP_ISTS_OPF_Static_AT4",
-    "LOP_ISTS_OPF_Static_SPG9",
-    "LOP_ISTS_OPF_Static_SPG9",
-    "UK3CB_MEE_O_SPG9",
-    "UK3CB_MEE_O_SPG9",
-    "LOP_ISTS_OPF_AGS30_TriPod",
-    "LOP_ISTS_OPF_AGS30_TriPod",
-    "UK3CB_MEE_O_AGS",
-    "UK3CB_MEE_O_AGS",
-    "LOP_ISTS_OPF_Static_Mk19_TriPod",
-    "LOP_ISTS_OPF_Static_Mk19_TriPod",
-
-    // **Rare (AA, Artillery, Mortars)**
-    "LOP_ISTS_OPF_Igla_AA_pod",
-    "UK3CB_MEE_O_Igla_AA_pod",
-    "LOP_ISTS_OPF_Static_ZU23",
-    "UK3CB_MEE_O_ZU23",
-    "UK3CB_MEE_O_2b14_82mm",      // Mortar
-    "UK3CB_MEE_O_D30",            // D-30 Howitzer
-
-    // **Rare but Useful (Defensive Assets)**
-    "UK3CB_MEE_O_Searchlight",
-    "UK3CB_MEE_O_Searchlight"
+    "UK3CB_MEE_O_PKM_nest_des"
 ];
 
 
 opfor_recyclable = [
-    ["LOP_ISTS_OPF_Nissan_PKM", 1, round (30 / GRLIB_recycling_percentage), 2],
-    ["LOP_ISTS_OPF_Offroad_M2", 1, round (30 / GRLIB_recycling_percentage), 2],
-    ["LOP_ISTS_OPF_Landrover_M2", 1, round (30 / GRLIB_recycling_percentage), 2],
-    ["UK3CB_ADM_O_LR_M2", 1, round (35 / GRLIB_recycling_percentage), 2],
-    ["LOP_ISTS_OPF_Offroad_AT", 1, round (40 / GRLIB_recycling_percentage), 2],
-    ["LOP_ISTS_OPF_Landrover_SPG9", 1, round (45 / GRLIB_recycling_percentage), 2],
-    ["UK3CB_ADM_O_Hilux_GMG", 1, round (40 / GRLIB_recycling_percentage), 2],
-    ["UK3CB_ADM_O_LR_AGS30", 1, round (45 / GRLIB_recycling_percentage), 2],
-    ["UK3CB_ADM_O_RIF_1", 1, round (30 / GRLIB_recycling_percentage), 2],
-    ["LOP_ISTS_OPF_BTR60", 10, round (500 / GRLIB_recycling_percentage), 10],
-    ["UK3CB_MEE_O_BTR40_MG", 10, round (600 / GRLIB_recycling_percentage), 10],
-    ["LOP_ISTS_OPF_BMP1", 10, round (1200 / GRLIB_recycling_percentage), 10],
-    ["LOP_ISTS_OPF_BMP2", 10, round (1300 / GRLIB_recycling_percentage), 10],
-    ["UK3CB_MEE_O_BMP1", 10, round (1300 / GRLIB_recycling_percentage), 10],
-    ["LOP_ISTS_OPF_T55", 15, round (1400 / GRLIB_recycling_percentage), 15],
-    ["UK3CB_MEE_O_T55", 15, round (1500 / GRLIB_recycling_percentage), 15],
-    ["LOP_ISTS_OPF_T72BA", 15, round (1600 / GRLIB_recycling_percentage), 15],
-    ["LOP_ISTS_OPF_ZSU234", 15, round (1800 / GRLIB_recycling_percentage), 15],
-    ["UK3CB_MEE_O_MTLB_ZU23", 10, round (1000 / GRLIB_recycling_percentage), 10],
-    ["LOP_ISTS_OPF_Truck", 5, round (300 / GRLIB_recycling_percentage), 5],
-    ["UK3CB_MEE_O_Ural", 5, round (300 / GRLIB_recycling_percentage), 5],
-    ["UK3CB_MEE_O_Ural_open", 5, round (300 / GRLIB_recycling_percentage), 5],
-    ["UK3CB_MEE_O_V3S_Transport", 5, round (250 / GRLIB_recycling_percentage), 5],
-    ["UK3CB_MEE_O_V3S_Open", 5, round (250 / GRLIB_recycling_percentage), 5],
-    ["UK3CB_MEE_O_Kamaz_covered", 5, round (350 / GRLIB_recycling_percentage), 5],
-    ["UK3CB_MEE_O_Kamaz_open", 5, round (350 / GRLIB_recycling_percentage), 5],
-    ["LOP_ISTS_OPF_Kamaz_Covered", 5, round (350 / GRLIB_recycling_percentage), 5],
-    ["LOP_ISTS_OPF_Kamaz_Open", 5, round (350 / GRLIB_recycling_percentage), 5],
-    ["LOP_TKA_Mi8MT_Cargo", 10, round (1600 / GRLIB_recycling_percentage), 20],
-    ["UK3CB_MEE_O_UH1H_unarmed", 10, round (1200 / GRLIB_recycling_percentage), 20],
-    ["UK3CB_MEE_O_Mi_8MTV", 10, round (1700 / GRLIB_recycling_percentage), 20],
-    ["UK3CB_MEE_O_Mi_8MT", 10, round (1700 / GRLIB_recycling_percentage), 20],
-    ["UK3CB_MEE_O_Mi_17", 10, round (1800 / GRLIB_recycling_percentage), 20],
-    ["UK3CB_MEE_O_Mi_8AMTSh", 10, round (1900 / GRLIB_recycling_percentage), 20],
-    ["UK3CB_MEE_O_Mi_24V", 10, round (2000 / GRLIB_recycling_percentage), 20],
-    ["UK3CB_MEE_O_Mi_24P", 10, round (2000 / GRLIB_recycling_percentage), 20],
-    ["UK3CB_MEE_O_L39_CAS", 20, round (2500 / GRLIB_recycling_percentage), 30],
-    ["UK3CB_MEE_O_Su25SM", 20, round (3000 / GRLIB_recycling_percentage), 30],
-    ["UK3CB_MEE_O_AN2", 20, round (1200 / GRLIB_recycling_percentage), 30],
-    ["LOP_ISTS_OPF_Static_DSHKM", 0, round (50 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_DSHKM", 0, round (50 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_DSHkM_Mini_TriPod", 0, round (60 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Kord", 0, round (80 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Kord_High", 0, round (80 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_KORD", 0, round (90 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_KORD_high", 0, round (90 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Static_M2", 0, round (100 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Static_M2_MiniTripod", 0, round (100 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_NSV_TriPod", 0, round (120 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_NSV", 0, round (120 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Static_AT4", 0, round (150 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Static_SPG9", 0, round (180 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_SPG9", 0, round (180 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_AGS30_TriPod", 0, round (200 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_AGS", 0, round (200 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Static_Mk19_TriPod", 0, round (250 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Igla_AA_pod", 0, round (300 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_Igla_AA_pod", 0, round (300 / GRLIB_recycling_percentage), 0],
-    ["LOP_ISTS_OPF_Static_ZU23", 0, round (500 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_ZU23", 0, round (500 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_2b14_82mm", 0, round (300 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_D30", 0, round (400 / GRLIB_recycling_percentage), 0],
-    ["UK3CB_MEE_O_Searchlight", 0, round (50 / GRLIB_recycling_percentage), 0],
     // Vanilla
 	["O_HMG_01_high_F",0,round (20 / GRLIB_recycling_percentage),0],
 	["O_GMG_01_high_F",0,round (40 / GRLIB_recycling_percentage),0],
