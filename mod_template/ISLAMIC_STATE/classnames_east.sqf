@@ -231,7 +231,7 @@ opfor_battlegroup_vehicles = [
 
 // All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 opfor_battlegroup_vehicles_low_intensity = [
-    // 🔹 Common Light Vehicles (Most Frequent)
+    //  Common Light Vehicles (Most Frequent)
     "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm", "UK3CB_MEE_O_Hilux_Pkm",
     "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2", "UK3CB_MEE_O_Hilux_M2",
     "UK3CB_MEE_O_Hilux_Dshkm", "UK3CB_MEE_O_Hilux_Dshkm",
@@ -239,15 +239,15 @@ opfor_battlegroup_vehicles_low_intensity = [
     "UK3CB_MEE_O_Datsun_Pkm",
     "UK3CB_MEE_O_BRDM2", // Light recon vehicle
 
-    // 🔹 Limited Infantry Support Vehicles (Rare)
+    //  Limited Infantry Support Vehicles (Rare)
     "UK3CB_MEE_O_BTR40_MG", // Light APC with MG
     "UK3CB_MEE_O_M113tank_M2_90", // Mechanized infantry support, low threat
 
-    // 🔹 Anti-Tank Support (Very Rare)
+    //  Anti-Tank Support (Very Rare)
     "UK3CB_MEE_O_Hilux_Spg9", // Only one light AT gun truck
     "UK3CB_MEE_O_Hilux_Metis", // Limited ATGM capability
 
-    // 🔹 Minimal Anti-Air (Extremely Rare)
+    //  Minimal Anti-Air (Extremely Rare)
     "UK3CB_MEE_O_Hilux_Igla_Chair" // One weak MANPADS option
 ];
 
@@ -279,6 +279,67 @@ opfor_statics = [
 
 
 opfor_recyclable = [
+    //  Static Weapons
+    ["UK3CB_MEE_O_KORD_high", 0, round (20 / GRLIB_recycling_percentage), 0],
+    ["UK3CB_MEE_O_PKM_High", 0, round (30 / GRLIB_recycling_percentage), 0],
+    ["UK3CB_MEE_O_Igla_AA_pod", 0, round (80 / GRLIB_recycling_percentage), 0],
+    ["UK3CB_MEE_O_SPG9", 0, round (80 / GRLIB_recycling_percentage), 0],
+    ["UK3CB_MEE_O_2b14_82mm", 0, round (300 / GRLIB_recycling_percentage), 0],
+
+    //  Gun Trucks
+    ["UK3CB_MEE_O_Hilux_Pkm", 1, round (30 / GRLIB_recycling_percentage), 2],
+    ["UK3CB_MEE_O_Hilux_M2", 1, round (35 / GRLIB_recycling_percentage), 2],
+    ["UK3CB_MEE_O_Hilux_Dshkm", 1, round (40 / GRLIB_recycling_percentage), 2],
+    ["UK3CB_MEE_O_Hilux_GMG", 1, round (45 / GRLIB_recycling_percentage), 2],
+
+    //  AT & Indirect Fire
+    ["UK3CB_MEE_O_Hilux_Spg9", 1, round (50 / GRLIB_recycling_percentage), 2],
+    ["UK3CB_MEE_O_Hilux_Metis", 1, round (55 / GRLIB_recycling_percentage), 2],
+    ["UK3CB_MEE_O_Hilux_Rocket", 1, round (60 / GRLIB_recycling_percentage), 2],
+    ["UK3CB_MEE_O_Hilux_Mortar", 1, round (70 / GRLIB_recycling_percentage), 2],
+
+    //  AA Vehicles
+    ["UK3CB_MEE_O_Hilux_Zu23_Front", 2, round (150 / GRLIB_recycling_percentage), 3],
+    ["UK3CB_MEE_O_Hilux_Vulcan_Front", 2, round (200 / GRLIB_recycling_percentage), 3],
+    ["UK3CB_MEE_O_Hilux_Igla_Chair", 2, round (180 / GRLIB_recycling_percentage), 3],
+    ["UK3CB_MEE_O_V3S_Zu23", 2, round (220 / GRLIB_recycling_percentage), 3],
+
+    //  Utility & Transport Vehicles
+    ["UK3CB_MEE_O_LR_M2", 2, round (50 / GRLIB_recycling_percentage), 3],
+    ["UK3CB_MEE_O_LR_SPG9", 2, round (60 / GRLIB_recycling_percentage), 3],
+    ["UK3CB_MEE_O_Datsun_Pkm", 2, round (40 / GRLIB_recycling_percentage), 3],
+    ["UK3CB_MEE_O_V3S_Open", 5, round (20 / GRLIB_recycling_percentage), 5],
+    ["UK3CB_MEE_O_V3S_Closed", 5, round (25 / GRLIB_recycling_percentage), 5],
+    ["UK3CB_MEE_O_V3S_Refuel", 5, round (50 / GRLIB_recycling_percentage), 5],
+    ["UK3CB_MEE_O_V3S_Reammo", 5, round (50 / GRLIB_recycling_percentage), 5],
+    ["UK3CB_MEE_O_V3S_Recovery", 5, round (60 / GRLIB_recycling_percentage), 5],
+
+    //  Recon & Light APCs
+    ["UK3CB_MEE_O_BRDM2", 5, round (250 / GRLIB_recycling_percentage), 5],
+    ["UK3CB_MEE_O_BRDM2_ATGM", 5, round (300 / GRLIB_recycling_percentage), 5],
+    ["UK3CB_MEE_O_M113tank_M2_90", 5, round (400 / GRLIB_recycling_percentage), 5],
+    ["UK3CB_MEE_O_M113tank_MK19_90", 5, round (450 / GRLIB_recycling_percentage), 5],
+    ["UK3CB_MEE_O_MTLB_BMP", 5, round (500 / GRLIB_recycling_percentage), 5],
+
+    //  Infantry Fighting Vehicles
+    ["UK3CB_MEE_O_BTR40_MG", 10, round (600 / GRLIB_recycling_percentage), 10],
+    ["UK3CB_MEE_O_BTR60", 10, round (750 / GRLIB_recycling_percentage), 10],
+    ["UK3CB_MEE_O_BMP1", 10, round (900 / GRLIB_recycling_percentage), 10],
+
+    //  Tanks
+    ["UK3CB_MEE_O_T55", 15, round (1400 / GRLIB_recycling_percentage), 15],
+    ["UK3CB_KRG_O_M60A3", 15, round (1600 / GRLIB_recycling_percentage), 15],
+    ["UK3CB_ADA_O_T72B", 15, round (1800 / GRLIB_recycling_percentage), 15],
+    ["UK3CB_ADA_O_T72BM", 15, round (2000 / GRLIB_recycling_percentage), 15],
+
+    //  Artillery
+    ["UK3CB_MEE_O_Hilux_Rocket_Arty", 15, round (2200 / GRLIB_recycling_percentage), 15],
+
+    //  Helicopters & Planes
+    ["UK3CB_TKA_O_Mi_24P", 10, round (1700 / GRLIB_recycling_percentage), 20],
+    ["UK3CB_TKA_O_Mi_24V", 10, round (1800 / GRLIB_recycling_percentage), 20],
+    ["UK3CB_TKA_O_MIG21_CAS", 20, round (2000 / GRLIB_recycling_percentage), 30],
+    ["UK3CB_TKA_O_Su25SM_Cluster", 20, round (2200 / GRLIB_recycling_percentage), 30],
     // Vanilla
 	["O_HMG_01_high_F",0,round (20 / GRLIB_recycling_percentage),0],
 	["O_GMG_01_high_F",0,round (40 / GRLIB_recycling_percentage),0],
